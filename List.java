@@ -41,6 +41,17 @@ public class List {
     
     /** GIVE Textual representation of this list. */
     public String toString() {
+        if (size == 0) {
+            return "()";
+        }
+        String res = "(";
+        Node current = first;
+        while (current != null) {
+            res += current.toString() + " ";
+            current = current.next;
+        }
+        return res.substring(0, res.length() - 1) + ")";
+        /*
         String str = "(";
         Node current = first;
         while(current != null) {
@@ -48,7 +59,7 @@ public class List {
             current = current.next;
         }
         str += ")";
-        return str;
+        return str;*/
     }
 
     /** Returns the index of the first CharData object in this list
