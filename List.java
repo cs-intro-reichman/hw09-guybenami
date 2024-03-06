@@ -51,15 +51,6 @@ public class List {
             current = current.next;
         }
         return res.substring(0, res.length() - 1) + ")";
-        /*
-        String str = "(";
-        Node current = first;
-        while(current != null) {
-            str += current.cd;
-            current = current.next;
-        }
-        str += ")";
-        return str;*/
     }
 
     /** Returns the index of the first CharData object in this list
